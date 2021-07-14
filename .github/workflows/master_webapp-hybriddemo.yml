@@ -4,9 +4,10 @@
 name: Azure App Service - webapp-hybriddemo(Production), Build and deploy DotnetCore app
 
 on:
-  push:
-    branches:
-      - master
+  repository_dispatch:
+    types: deploy_prod
+
+      
 
 jobs:
   build-and-deploy:
